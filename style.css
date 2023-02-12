@@ -136,14 +136,14 @@ body {
 
 /*about*/
 
-.about h2, .menu h2{
+.about h2, .menu h2, .contact h2{
 	font-size: 2.3rem;
 	text-align: center;
 	padding: 6rem 7% 3rem;
 	color: #fff;
 }
 
-.about h2 span, .menu h2 span{
+.about h2 span, .menu h2 span, .contact h2 span{
 	color: var(--primary);
 }
 
@@ -306,6 +306,150 @@ body {
 	top: 0;
 	opacity: 1;
 }
+
+/*contact*/
+
+.contact h2{
+	padding-bottom: 1.5rem;
+}
+.contact .row
+{
+	display: flex;
+	min-height: 100vh;
+}
+
+.contact .row .map
+{
+	flex: 1 1 45rem;
+	width: 100%;
+	object-fit: cover;
+}
+
+.contact .row form
+{
+	flex: 1 1 45rem;
+/*	padding: 5rem 2rem;*/
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	background: #1d2b3a;
+	align-items: center;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.contact .row form .input-group
+{
+	position: relative;
+	width: 400px;
+}
+.contact .row form .input-group input, .contact .row form .input-group textarea
+{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid rgba(225, 225, 225, 0.25);
+	background: #1d2b3a;
+	border-radius: 5px;
+	margin-top: 1rem;
+	outline: none;
+	color: #fff;
+	font-size: 1.7rem;
+	transition: 0.2s;
+}
+
+.contact .row form .input-group span 
+{
+	position: absolute;
+	left: 0;
+	padding: 20px;
+	pointer-events: none;
+	font-size: 1.7rem;
+	color: rgba(225, 225, 225, 0.25);
+	text-transform: uppercase;
+	transition: 0.2s;
+
+}
+
+.contact .row form .input-group input:valid ~ span, .contact .row form .input-group textarea:valid ~ span, .contact .row form .input-group input:focus ~ span, .contact .row form .input-group textarea:focus ~ span 
+{
+	color: #00dfc4;
+/*	transform: translateX(10px) translateY(-7px);*/
+	transform: translateX(10px);
+	font-size: 1.2rem;
+	padding: 0 10px;
+	background: #1d2b3a;
+	border-left: 1px solid #00dfc4;
+	border-right: 1px solid #00dfc4;
+/*	letter-spacing: 0.2em;*/
+}
+
+.contact .row form .input-group input:valid, .contact .row form .input-group textarea:valid, .contact .row form .input-group input:focus, .contact .row form .input-group textarea:focus 
+{
+	border: 1px solid #00dfc4;
+}
+
+.contact .row form .input-group:nth-child(2) input:valid ~ span, .contact .row form .input-group:nth-child(2) textarea:valid ~ span, .contact .row form .input-group:nth-child(2) input:focus ~ span, .contact .row form .input-group:nth-child(2) textarea:focus ~ span 
+{
+	background: #00dfc4;
+	color: #1d2b3a;
+	border-radius: 2px;
+}
+
+.contact .row form .input-group:nth-child(2) input:focus:invalid ~ span
+{
+	background: red;
+	color: #fff;
+	border-left: 1px solid red;
+	border-right: 1px solid red;
+}
+.contact .row form .input-group input:focus:invalid ~ span,
+.contact .row form .input-group textarea:focus:invalid ~ span
+{
+	border-left: 1px solid red;
+	border-right: 1px solid red;
+	color: red;
+}
+.contact .row form .input-group input:focus:invalid,
+.contact .row form .input-group textarea:focus:invalid
+{
+	border: 1px solid red;
+
+}
+
+
+
+
+/*.contact .row form .input-group
+{
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+	background-color: var(--bg);
+	border: 1px solid #eee;
+	padding-left: 2rem;
+}
+
+.contact .row form .input-group input, .contact .row form .input-group textarea
+{
+	width: 100%;
+	padding: 2rem;
+	font-size: 1.7rem;
+	background: none;
+	color: #fff;
+}
+*/
+
+.contact .row form .btn
+{
+	margin-top: 1rem;
+	display: inline-block;
+	padding: 1rem 3rem;
+	font-size: 1.7rem;
+	color: #fff;
+	background-color: var(--primary);
+	cursor: pointer;
+	border-radius: 10px;
+}
 /*media queries*/
 
 /*laptop*/
@@ -355,6 +499,40 @@ body {
 		width: 100%;
 		margin-bottom: 2rem;
 	}
+	.contact .row 
+	{
+		flex-wrap: wrap;
+	}
+
+	.contact .row .map 
+	{
+/*		height: 20rem;*/
+	}
+	.contact .row form 
+	{
+		padding: 0;
+	}
+	.contact .row form .input-group
+	{
+		margin:1rem;
+		width: 90vw;
+
+	}
+	.contact .row form .input-group input, .contact .row form .input-group textarea
+	{
+		padding: 1rem;
+		margin: 0;
+	}
+	.contact .row form .input-group input:valid ~ span, .contact .row form .input-group textarea:valid ~ span, .contact .row form .input-group input:focus ~ span, .contact .row form .input-group textarea:focus ~ span 
+	{
+		transform: translateX(10px) translateY(-7px);
+	}
+	.contact .row form .input-group span
+	{
+		padding: 15px;
+	}
+
+
 }
 
 /*mobile*/
