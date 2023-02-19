@@ -16,7 +16,7 @@
 body {
 	background-color: var(--bg);
 	color: #fff;
-	height: 20000px;
+/*	height: 20000px;*/
 }
 
 .navbar {
@@ -324,7 +324,10 @@ body {
 	width: 100%;
 	object-fit: cover;
 }
-
+.contact .row form h2
+{
+	display: none;
+}
 .contact .row form
 {
 	flex: 1 1 45rem;
@@ -407,7 +410,7 @@ body {
 {
 	border-left: 1px solid red;
 	border-right: 1px solid red;
-	color: red;
+	color: #fff;
 }
 .contact .row form .input-group input:focus:invalid,
 .contact .row form .input-group textarea:focus:invalid
@@ -450,6 +453,70 @@ body {
 	cursor: pointer;
 	border-radius: 10px;
 }
+
+/*section footer*/
+footer
+{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+/*	background: #1d2b3a;*/
+	height: 60vh;
+	width: 100vw;
+	position: relative;
+}
+footer::before
+{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 0.3rem;
+	height: 60%;
+/*	top: 0;*/
+	background: #1d2b3a;
+}
+
+footer .content h3
+{
+	font-size: 2rem;
+	color: #fff;
+}
+
+footer .content p 
+{
+	font-size: 1rem;
+}
+footer .content h3 span,
+footer .content p span 
+{
+	color: var(--primary);
+}
+
+footer .link 
+{
+	display: flex;
+	gap: 2rem;
+	justify-content: center;
+	flex-direction: column;
+
+
+}
+footer .link .content i
+{
+	color: rgba(225, 225, 225, 0.8);
+}
+footer .link .content a
+{
+	color: rgba(225, 225, 225, 0.8);
+	padding: 0.7rem;
+	font-size: 1.3rem;
+	transition: 0.5s;
+}
+footer .link .content a:hover
+{
+	color: var(--primary);
+}
+
 /*media queries*/
 
 /*laptop*/
@@ -512,6 +579,13 @@ body {
 	{
 		padding: 0;
 	}
+	.contact .row form h2
+	{
+		display: inline;	
+		font-size: 2.5rem;
+		font-weight: 600;
+
+	}
 	.contact .row form .input-group
 	{
 		margin:1rem;
@@ -530,6 +604,10 @@ body {
 	.contact .row form .input-group span
 	{
 		padding: 15px;
+	}
+	footer::before
+	{
+		height: 45%;
 	}
 
 
